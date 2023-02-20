@@ -31,7 +31,7 @@ namespace SmartMatrix {
         /**
          * Push all changes made to the framebuffer to the display
          */
-        //% blockId="Matrix_show" block="%matrix| show"
+        //% blockId="Matrix_show" block="%matrix| anzeigen"
         //% weight=90
         //% blockGap=8 parts="SmartMatrix"
         show(): void {
@@ -41,7 +41,7 @@ namespace SmartMatrix {
          * Set the brightness of the LEDs
          * @param setpoint -the brightness setpoint, on a scale from 0-255
          */
-        //% blockId="Matrix_Brightness" block="%matrix set brightness to %setpoint"
+        //% blockId="Matrix_Brightness" block="%matrix setze Helligkeit auf (1 - 255) %setpoint"
         //% weight=80
         //% setpoint.defl=32
         //% blockGap=8 parts="SmartMatrix"
@@ -51,7 +51,7 @@ namespace SmartMatrix {
         /**
          * Empty the entire framebuffer, a call to "show()" must be made to made changes visible
          */
-        //% blockId="Matrix_clear" block="clear %matrix"
+        //% blockId="Matrix_clear" block="lösche %matrix"
         //% weight=80
         //% blockGap=8 parts="SmartMatrix"
         clear(): void {
@@ -63,7 +63,7 @@ namespace SmartMatrix {
          * @param y - the position on the y-axis (top is 0)
          * @param colour - the colour to set the pixel to
          */
-        //% blockId="Matrix_setPixel" block="%matrix| set pixel at x %x| y %y| to colour %colour"
+        //% blockId="Matrix_setPixel" block="%matrix| setze Pixel x %x| y %y| auf Farbe %colour"
         //% weight=80
         //% colour.shadow=neopixel_colors
         //% blockGap=8 parts="SmartMatrix"
@@ -79,7 +79,7 @@ namespace SmartMatrix {
          * @param yoffset the y position for the text
          * @param colour the colour in which the text will be displayed
          */
-        //% blockId="Matrix_scrollText" block="%matrix scroll text %text| with speed %speed| on Y postition %yoffset| and colour %colour"
+        //% blockId="Matrix_scrollText" block="%matrix text %text| mit Geschwindigkeit %speed| on Y postition %yoffset| and colour %colour"
         //% weight=75
         //% colour.shadow=neopixel_colors
         //% speed.min=1 speed.max=2000 speed.defl=1200
