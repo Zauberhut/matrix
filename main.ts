@@ -14,7 +14,7 @@
 
 //% weight=6 color=#00CC60 icon="\uf110"
 //% groups=["Setup", "Tools", "PixelControl"]
-namespace SmartMatrix {
+namespace Matrix {
     /**
      * A Matrix made of ws2812b LEDs
      */
@@ -23,24 +23,24 @@ namespace SmartMatrix {
         Width: number
         Height: number
 
-        //%blockId="Matrix_show" block="%matrix| show"
+        //%blockId="Matrix_show" block="%matrix| anzeigen"
         //%weight=90 group="Tools"
         show(): void {
             this.strip.show();
         }
-        //%blockId="Matrix_Brighness" block="%matrix set brightness to %setpoint"
+        //%blockId="Matrix_Brighness" block="%matrix setze Helligkeit auf (0-255) %setpoint"
         //%weight=80 group="Setup"
         //%setpoint.defl=32
         Brightness(setpoint: number): void {
             this.strip.setBrightness(setpoint);
         }
-        //%blockId="Matrix_clear" block="clear %matrix"
+        //%blockId="Matrix_clear" block="%matrix| löschen"
         //%weight=80 group="Tools"
         clear(): void {
             this.strip.clear();
         }
 
-        //%blockId="Matrix_setPixel" block="%matrix| set pixel at x %x| y %y| to colour %colour"
+        //%blockId="Matrix_setPixel" block="%matrix| setze das Pixel x %x| y %y| auf die Farbe %colour"
         //%weight=80 group="PixelControl"
         //%colour.shadow=neopixel_colors
         setPixel(x: number, y: number, colour: number): void {
@@ -51,10 +51,10 @@ namespace SmartMatrix {
         /**
          * scroll text on the matrix
          */
-        //%blockId="Matrix_scrollText" block="%matrix scroll text %text| with speed %speed| and colour %colour"
+        //%blockId="Matrix_scrollText" block="%matrix Text: %text| Geschwindigkeit (0 - 1024) %speed| Farbe %colour"
         //%weight=75 group="PixelControl"
         //%colour.shadow=neopixel_colors
-        //%speed.min=1 speed.max=1024 speed.defl=512
+        //%speed.min=0 speed.max=1024 speed.defl=512
         scrollText(text: string, speed: number, colour: number): void {
             this.strip.clear();
             for (let Xpos = this.Width; Xpos > -6 * text.length; Xpos--) {//for loop to scroll across the entire matrix
