@@ -88,7 +88,7 @@ namespace Matrix {
                 }
             }
         }
-        //%blockId="Matrix_drawBitmap2" block="%matrix draw bitmap %bitmap at x %xoffset y %yoffset| with width %width height %height in colour %colour"
+        //%blockId="Matrix_drawBitmap2" block="%matrix zeichne bitmap %bitmap bei  x %xoffset| y %yoffset| mit Breite %width| Höhe %height in der Farbe %colour"
         //%weight=70 group="PixelControl"
         //% colour.shadow=neopixel.colors
         drawBitmap2(bitmap: number[],xoffset: number, yoffset: number, width: number, height: number, colour: number, doMirror: boolean = false): void {
